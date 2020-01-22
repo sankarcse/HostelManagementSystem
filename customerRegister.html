@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  border:3px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin-left:20px;
+}
+
+.header{
+  width: 60%;
+  padding: 0px;
+  outline: none;
+  text-align: center;
+  color: black;
+  background:pink;  
+  margin-left:20%;
+}
+
+.input-field:focus {
+  border: 2px solid red;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+ margin-left: 25%;
+  opacity: 0.8;
+  box-shadow: 0 10px #666;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: green;
+}
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:focus {
+outline:0;
+}
+
+.input-container{
+  border-radius: 5px;
+  background-color: green;
+}
+
+body{
+    background-image: url('bg.jfif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+
+.border{
+	   width: 100%;
+    height: 100%;
+    padding: 10px;
+  border: 10px groove #33B5FF;
+  align:center;
+  margin-top:5%;
+  margin-bottom:10px;
+	}
+	
+	.address{
+	   width: 100%;
+    height: 5%;
+    padding: 5px;
+  border: 10px groove #33FF93;
+  align:center;
+  margin-bottom:10px;
+	}
+	
+.label{
+  width: 60%;
+  padding: 0px;
+  outline: none;
+  text-align: center;
+  color: black; 
+  margin-left:0%;
+}
+     .image {
+        background: url("eve_icon.jpg");
+        height: 20px;
+        width: 20px;
+        display: block;
+        /* Other styles here */
+    }
+
+</style>
+</head>
+<body>
+
+<form action="/action_page.php" style="max-width:500px;margin:auto;" >
+
+
+<div class="border">
+<h2 class="header">Admin Register Form</h2>
+<label class="lable">First Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="First Name" name="firstName">
+  </div>
+  <label>Last Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Last Name" name="lastName">
+  </div>
+  
+  <label>Joining Date</label>
+  <div class="input-container">
+    <i class="fa fa-calendar icon"></i>
+    <input class="input-field" type="date" placeholder="Joining Date" name="joiningDate">
+  </div>
+  
+<label>Email</label>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email (Optional)" name="email">
+  </div>
+<label>Phone Number</label>
+ <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="tel" placeholder="Phone Number" name="phoneNumber">
+  </div>
+  <label>Adhaar Card Number</label>
+  <div class="input-container">
+    <i class="fa fa-id-card icon"></i>
+    <input class="input-field" type="text" placeholder="Adhaar Number" name="adhaarNumber">
+  </div>
+  
+  
+  <i class="fa fa-home icon" style="margin-left:25%"></i>
+    <label class="label">Address</label>
+  <div class="address">
+   <label>Home Town</label>
+  <div class="input-container">
+    <i class="fa fa-home icon icon"></i>
+    <input class="input-field" type="text" placeholder="Home Town" name="homeTown">
+  </div>
+  
+   <label>District</label>
+  <div class="input-container">
+    <i class="fa fa-home icon icon"></i>
+    <input class="input-field" type="text" placeholder="District" name="district">
+  </div>
+  
+   <label>State</label>
+  <div class="input-container">
+    <i class="fa fa-mountain icon icon"></i>
+    <input class="input-field" type="text" placeholder="State" name="state">
+  </div>
+
+ <label>Country</label>
+  <div class="input-container">
+    <i class="image"></i>
+    <input class="input-field" type="text" placeholder="Country" name="country">
+  </div>
+  <label>Pin Code Number</label>
+  <div class="input-container">
+    <i class="fa fa-home icon icon"></i>
+    <input class="input-field" type="text" placeholder="Pin Code Number" name="pinCode">
+  </div>
+  
+  </div>
+  </div>
+  
+  <button type="submit" class="btn">Register</button>
+  
+  </div>
+</form>
+
+</body>
+</html>

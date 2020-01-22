@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box; margin-bottom:10;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  float: left;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar tab1.active {
+  background-color:green;
+}
+
+.navbar a:hover {
+  background-color: green;
+}
+
+.navbar a:visited {
+  background-color: green;
+}
+
+.active {
+  background-color: green;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+/*input[type=text] {
+    background-image: url('search-icon.png');
+    background-position: 9px 10px;
+    background-repeat: no-repeat;
+	padding-bottom:15px;
+	margin-left:25%;
+	editable:true;
+}*/
+ input[type=submit] {
+	
+	width:200;
+	height:200;
+    background-repeat: no-repeat;
+	padding-bottom:15px;
+	editable:true;
+}
+.loginPage{
+  display: block;
+  margin-bottom: 15px;
+text-align:center;
+ <!-- border: 10px groove green; -->
+}
+.srch{float: right;margin-right: 20px;width: auto;
+    height: auto;}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+.input-field {
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.header{
+  padding: 0px;
+  outline: none;
+  margin: 0 auto;
+  color: black;
+  margin-bottom:10px;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}	
+/* Set a style for the submit button */
+.btn {
+ background-color: dodgerblue;
+    color: white;
+    padding: 8px 21px;
+    border: white;
+    cursor: pointer;
+    width: 123px;
+    margin-left: 8%;
+    opacity: 0.8;
+    box-shadow: 0 5px #666;
+    border-radius: 15px;
+}
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: green;
+}
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:focus {
+outline:0;
+}
+.goBtn{margin-left:-32px;}
+</style>
+<script>
+function homeClick(){
+    document.getElementById('loginPage').style.display="block";
+	document.getElementById('tab2').style.backgroundColor="green";
+	document.getElementById('tab1').style.backgroundColor="#555";
+	document.getElementById('dashboard').style.display="none";
+	document.getElementById('dashboard').style.display="none";
+	document.getElementById('AdminRegisterPage').style.display="none";
+}
+
+function dashboard(){
+	document.getElementById('dashboard').style.display="block";
+	document.getElementById('tab2').style.backgroundColor="#555";
+	document.getElementById('tab1').style.backgroundColor="green";
+	document.getElementById('loginPage').style.display="none";
+	document.getElementById('AdminRegisterPage').style.display="none";
+}
+
+function adminPage(){
+	document.getElementById('AdminRegisterPage').style.display="block";
+	document.getElementById('dashboard').style.display="none";
+	document.getElementById('loginPage').style.display="none";
+}
+
+</script>
+<body>
+
+<div class="navbar">
+  <a id="tab1" onclick="dashboard()"><i class="fa fa-fw fa-home"></i>Dashborad</a>
+  <a id="tab2" onclick="homeClick();"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a id="tab3" href="login.html"><i class="fa fa-fw fa-search"></i> Search</a> 
+  <a id="tab4" href="forgotpassword.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a id="tab5" href="changepassword.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  
+</div>
+
+
+ 
+ 
+
+
+
+<div id="dashboard"class="dashboard">
+<p class="srch"><input type="search" class=""><input class="goBtn" type="button" value="GO"></p>
+
+</div>
+
+<div id="AdminRegisterPage" class="AdminRegisterPage">
+<label>First Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="First Name" name="firstName">
+  </div>
+  <label>Last Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Last Name" name="lastName">
+  </div>
+<label>Email</label>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  <label>Password</label>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="password">
+  </div>
+  <label>Confirm Password</label>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Confirm Password" name="confirmPassword">
+  </div>
+<label>Phone Number</label>
+ <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="tel" placeholder="Phone Number" name="phoneNumber">
+  </div>
+  <label>Adhaar Card Number</label>
+  <div class="input-container">
+    <i class="fa fa-id-card icon"></i>
+    <input class="input-field" type="text" placeholder="Adhaar Number" name="adhaarNumber">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+  <a href="login.html">forgot password</a>
+  
+  </div>
+
+<div id="loginPage" class="loginPage">
+  <h2 class="header">Login Form</h2>
+  <label style="margin-right:250px">User Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="userName">
+  </div>
+  <label style="margin-right:250px">Password</label>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="password">
+  </div>
+  
+
+  <button type="submit" class="btn">Login</button>
+  <a href="http://www.google.com">forgot password</a>
+  </div>
+
+</body>
+</html> 

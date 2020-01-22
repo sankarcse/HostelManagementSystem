@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  border:3px;
+}
+
+.icon {  
+  padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+     width: 300px;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 0px;
+
+}
+
+.header{
+  width: 60%;
+  padding: 0px;
+  outline: none;
+  text-align: center;
+  color: black;
+  background:pink;  
+  margin-left:20%;
+}
+
+.input-field:focus {
+  border: 2px solid green;
+}
+
+/* Set a style for the submit button */
+.btn {
+ background-color: dodgerblue;
+    color: white;
+    padding: 8px 21px;
+    border: white;
+    cursor: pointer;
+    width: 123px;
+    margin-left: 8%;
+    opacity: 0.8;
+    box-shadow: 0 5px #666;
+    border-radius: 15px;
+}
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: green;
+}
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn:focus {
+outline:0;
+}
+.goBtn{margin-left:-32px;}
+.input-container{
+  border-radius: 5px;
+}
+
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+<form action="/action_page.php" style="max-width:500px;margin:auto;" >
+
+
+<div class="border">
+<label>First Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="First Name" name="firstName">
+  </div>
+  <label>Last Name</label>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Last Name" name="lastName">
+  </div>
+<label>Email</label>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div>
+  <label>Password</label>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="password">
+  </div>
+  <label>Confirm Password</label>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Confirm Password" name="confirmPassword">
+  </div>
+<label>Phone Number</label>
+ <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="tel" placeholder="Phone Number" name="phoneNumber">
+  </div>
+  <label>Adhaar Card Number</label>
+  <div class="input-container">
+    <i class="fa fa-id-card icon"></i>
+    <input class="input-field" type="text" placeholder="Adhaar Number" name="adhaarNumber">
+  </div>
+
+  <button type="submit" class="btn">Register</button>
+  <a href="login.html">forgot password</a>
+  
+  </div>
+</form>
+
+</body>
+</html>
